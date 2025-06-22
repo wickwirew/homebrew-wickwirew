@@ -2,7 +2,7 @@ class Otter < Formula
   desc "A SQLite compiler for Swift"
   homepage "https://github.com/wickwirew/Otter"
   license "MIT"
-  head "https://github.com/wickwirew/Otter.git"
+  head "https://github.com/wickwirew/Otter.git", branch: "main"
 
   depends_on xcode: ["15.3", :build]
 
