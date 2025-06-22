@@ -4,12 +4,18 @@ class Otter < Formula
   license "MIT"
   head "https://github.com/wickwirew/Otter.git", branch: "main"
 
-  depends_on xcode: ["15.3", :build]
+  depends_on xcode: ["16.3", :build]
 
   uses_from_macos "swift" => :build
 
   def install
-    system "swift", "build", "-c", "release", "--product", "otter"
+    args = if OS.mac?
+      ["--disable-sandbox"]
+    else
+      ["--static-swift-stdlib"]
+    end
+
+    system "swift", "build", *args, "-c", "release", "--product", "otter"
     bin.install ".build/release/otter"
   end
 
