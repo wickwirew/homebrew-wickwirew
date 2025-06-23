@@ -16,7 +16,7 @@ class Otter < Formula
     end
 
     system "swift", "build", *args, "-c", "release", "--product", "OtterCLI"
-    system "cp", ".build/release/OtterCLI", "./build/release/otter"
+    system "cp", ".build/release/OtterCLI", ".build/release/otter"
     bin.install ".build/release/otter"
   end
 
