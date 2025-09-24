@@ -1,4 +1,4 @@
-class Otter < Formula
+class puresql < Formula
   desc "A SQLite compiler for Swift"
   homepage "https://github.com/wickwirew/PureSQL"
   license "MIT"
@@ -21,6 +21,6 @@ class Otter < Formula
   end
 
   test do
-    otter --help
+    puresql --help
   end
 end
