@@ -1,4 +1,4 @@
-class puresql < Formula
+class PureSQL < Formula
   desc "A SQLite compiler for Swift"
   homepage "https://github.com/wickwirew/PureSQL"
   license "MIT"
