@@ -1,8 +1,8 @@
 class Otter < Formula
   desc "A SQLite compiler for Swift"
-  homepage "https://github.com/wickwirew/Otter"
+  homepage "https://github.com/wickwirew/PureSQL"
   license "MIT"
-  head "https://github.com/wickwirew/Otter.git", branch: "main"
+  head "https://github.com/wickwirew/PureSQL.git", branch: "main"
 
   depends_on xcode: ["16.3", :build]
 
@@ -15,9 +15,9 @@ class Otter < Formula
       ["--static-swift-stdlib"]
     end
 
-    system "swift", "build", *args, "-c", "release", "--product", "OtterCLI"
-    system "cp", ".build/release/OtterCLI", ".build/release/otter"
-    bin.install ".build/release/otter"
+    system "swift", "build", *args, "-c", "release", "--product", "PureSQLCLI"
+    system "cp", ".build/release/PureSQLCLI", ".build/release/puresql"
+    bin.install ".build/release/puresql"
   end
 
   test do
