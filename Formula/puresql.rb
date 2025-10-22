@@ -4,7 +4,7 @@ class Puresql < Formula
   url "https://github.com/wickwirew/PureSQL/archive/refs/tags/0.1.0.tar.gz"
   sha256 "e5fe34b9abca359bfc65b2371e8a8c79bcec398c748b7728186d074316bc24c5"
   license "MIT"
-  
+
   depends_on xcode: ["16.4", :build]
 
   uses_from_macos "swift" => :build
