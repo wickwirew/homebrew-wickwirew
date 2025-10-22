@@ -17,7 +17,7 @@ class Puresql < Formula
     end
 
     system "swift", "build", *args, "-c", "release", "--product", "PureSQLCLI"
-    cp, ".build/release/PureSQLCLI", ".build/release/puresql"
+    cp ".build/release/PureSQLCLI", ".build/release/puresql"
     bin.install ".build/release/puresql"
   end
 
